@@ -23,18 +23,19 @@ Android
 For 0.4.0 I have eliminated outputting images for the ldpi density. The
 Android documentation no longer lists this as a requirement.
 
-Point the script at your xxhdpi drawables folder and the script will process
+Point the script at your xxxhdpi drawables folder and the script will process
 either an individual file, or the entire folder, and output your xhdpi, hdpi,
 and mdpi resources in their respective folders. If these folders don't exist
 the script will create them for you.
 
 Android Example
 ===============
-Point the script at "res/drawables-xxhdpi", which the script assumes contains
-your xxhdpi images.
+Point the script at "res/drawables-xxxhdpi", which the script assumes contains
+your xxxhdpi images.
 Should your folder for the lower quality images not exist, the script will
 create the folders for you. You will end up with:
 
+* res/drawables-xxxhdpi/
 * res/drawables-xxhdpi/
 * res/drawables-xhdpi/
 * res/drawables-hdpi/
@@ -58,13 +59,13 @@ resize only one specific image.
 
 Android
 -------
-`$./resizer.py -a --folder ~/MyProject/res/drawables-xxhdpi` resize all
-found images in xxhdpi folder. Script will output in Android style.
+`$./resizer.py -a --folder ~/MyProject/res/drawables-xxxhdpi` resize all
+found images in xxxhdpi folder. Script will output in Android style.
 
-`$ ./resizer.py -a --file ~/MyProjects/res/drawables-xxhdpi/my_image.png`
+`$ ./resizer.py -a --file ~/MyProjects/res/drawables-xxxhdpi/my_image.png`
 resize specific image only.
 
-`$ ./resizer.py -a --prod` automatically find xxhdpi folder and execute
+`$ ./resizer.py -a --prod` automatically find xxxhdpi folder and execute
 as with --folder option. Note: --prod does not work with iOS flag.
 
 `$ ./resizer.py --exclude-scale [mdpi|hdpi|xhdpi]` do not scale down to this density.
